@@ -1,0 +1,283 @@
+/* You can add custom CSS and extend Boostrap styles in this file. Remember, Bootstrap is just CSS at the end of the day! */
+/* style.css */
+body {
+    background-color: #374785;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 10%
+}
+
+#footer-section {
+    background-color: #243053;
+    width: 100vw;
+    height: 5%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 101;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 60vh;
+}
+
+#hero-section {
+    background-image: url(https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kaW5nfGVufDB8fDB8fHww);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 60vh;
+    color: white;
+    position: relative;
+    margin-top: 55px;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    background-color: rgba(36, 48, 83, .7);
+}
+
+#hero-section img {
+    border-radius: 50vw;
+    width: 200px;
+    border: solid 20px rgba(168, 208, 230, 0.2);
+    transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+#hero-section img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+@media screen and (max-width: 375px) {
+    #hero-section img {
+        width: 40%;
+        border: solid 15px rgba(168, 208, 230, 0.2);
+    }
+}
+
+#hero-section p {
+    margin-bottom: 0;
+}
+
+#hero-section h1 {
+    margin-top: 1.2rem;
+    font-family: "DM Serif Display", serif;
+}
+
+.hero-content {
+    color: white;
+    padding: 20px;
+    margin-bottom: 0;
+}
+
+.navbar.navbar-expand-sm.bg-body-tertiary.fixed-top {
+    background-color: #243053 !important;
+}
+
+#navbarNav .nav-link {
+    color: white;
+    font-family: "DM Serif Display", serif;
+}
+
+#navbarNav .nav-link:hover {
+    color: lightgray;
+}
+
+#navbarNav .nav-link:active {
+    color: #f76c6c;
+}
+
+.bi.bi-house {
+    color: white !important;
+}
+
+.bi.bi-house:hover {
+    color: lightgray !important;
+}
+
+.bi.bi-house:active {
+    color: #f76c6c !important;
+}
+
+section h2 {
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #374785;
+    background-image: linear-gradient(to right, #374785, white, #374785);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+    border: 1px solid white;
+}
+
+#mission-section img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+#mission-section p {
+    padding: 15px;
+}
+
+#skills-section img {
+    width: 80%;
+    height: 15vh;
+    object-fit: contain;
+    object-position: center;
+    overflow: hidden;
+    max-width: 80px;
+}
+
+#skills-section .skill-item {
+    margin: 1vw;
+    padding: 1vw;
+    background-color: #a8d0e6;
+    border-radius: 5%;
+    text-align: center;
+    color: #243053;
+}
+
+@media (min-width: 992px) {
+    #skills-section .skill-item {
+        flex: 0 0 22%;
+        max-width: 22%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #skills-section .skill-item {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 767px) {
+    #skills-section .skill-item {
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
+}
+
+#contact-section img {
+    width: 20vw;
+    max-width: 150px;
+    padding: 15px;
+}
+
+#github-logo {
+    border-radius: 100%;
+}
+
+.skill-item img,
+.contact-item img {
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+    filter: brightness(0.7) sepia(1) hue-rotate(180deg);
+}
+
+.skill-item img:hover,
+.contact-item img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.carousel-item img {
+    height: 50vh;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: top;
+}
+
+.carousel-item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(36, 48, 83, 0.5);
+}
+
+.carousel-caption {
+    z-index: 100;
+}
+
+.carousel {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.carousel-caption h5 {
+    font-family: "DM Serif Display", serif;
+}
+
+.carousel-caption p {
+    font-family: "Lato", sans-serif;
+}
+
+.carousel {
+    margin-top: 20px;
+}
+
+@media (max-width: 300px) {
+    #inspiration-section {
+        margin-bottom: 55px;
+    }
+}
+
+@media (min-width: 301px) and (max-width: 800px) {
+    #inspiration-section {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    #inspiration-section {
+        margin-bottom: -15px;
+    }
+}
+
+@media (min-width: 1201px) {
+    #inspiration-section {
+        margin-bottom: -55px;
+    }
+}
+
+#hero-target,
+#mission-target,
+#skills-target,
+#contact-target,
+#inspiration-target{
+    position: relative;
+    top: -56px;
+}
