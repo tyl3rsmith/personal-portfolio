@@ -106,6 +106,17 @@ const projects = [
             "Simulated and validated processor hardware in Verilog, debugging timing and logic to ensure accurate instruction execution.",
         link: "https://github.com/tyl3rsmith/connect-4.git"
     },
+
+    {
+        name: "Personal Portfolio",
+        technologies: "HTML · CSS · JavaScript · Bootstrap",
+        category: "frontend",
+        description:
+            "Designed and developed a responsive personal portfolio website to showcase my software engineering experience, projects, technical skills, and ongoing work.",
+        highlight:
+            "Implemented responsive layouts, interactive project filtering, a resume viewer, and a dynamic project carousel using JavaScript and Bootstrap.",
+        link: "https://github.com/tyl3rsmith/personal-portfolio"
+    }
 ];
 
 
