@@ -34,6 +34,12 @@
             <a class="nav-link" aria-current="page" href="#mission-section">About Me</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#experience-section">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#projects-section">Projects</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#skills-section">Skills</a>
           </li>
           <li class="nav-item">
@@ -70,7 +76,7 @@
                   </iframe>
               </div>
           </div>
-          <button type="button">View Projects</button>
+          <a href="#projects-section">View Projects</a>
         </div>
       </div>
     </div>
@@ -159,6 +165,35 @@
 
       </div>
     </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects-section">
+
+      <hr>
+
+      <div class="container">
+
+          <div class="row">
+              <div class="col-12">
+                  <h2 id="projects-section-header">Projects</h2>
+              </div>
+          </div>
+
+          <div class="project-filters">
+              <button class="active" onclick="filterProjects('all')">All</button>
+              <button onclick="filterProjects('frontend')">Frontend</button>
+              <button onclick="filterProjects('backend')">Backend</button>
+              <button onclick="filterProjects('ml')">ML</button>
+              <button onclick="filterProjects('systems')">Systems</button>
+          </div>
+
+          <div class="row" id="projects-container"></div>
+
+      </div>
+
+      <hr>
+
   </section>
 
   <!-- Skills section -->

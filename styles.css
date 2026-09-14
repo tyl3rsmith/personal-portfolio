@@ -67,33 +67,48 @@ a {
 
 #hero-section,
 #mission-section,
+#experience-section,
 #skills-section,
+#projects-section,
 #contact-section,
 #inspiration-section {
     scroll-margin-top: 56px;
 }
 
 #mission-section,
+#experience-section,
 #skills-section,
+#projects-section,
 #contact-section,
 #inspiration-section {
     padding: 70px 0;
 }
 
-#mission-section h2,
-#skills-section h2,
-#contact-section h2,
-#inspiration-section h2 {
-    margin: 15px 0 15px;
-    text-align: center;
+
+/* =========================
+   SECTION DIVIDERS
+   ========================= */
+
+#mission-section > hr,
+#experience-section > hr,
+#skills-section > hr,
+#projects-section > hr,
+#contact-section > hr,
+#inspiration-section > hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #a8d0e6;
+    opacity: 0.7;
 }
 
-#mission-section hr,
-#skills-section hr,
-#contact-section hr,
-#inspiration-section hr {
-    margin: 10px 0;
-    opacity: 0.35;
+#mission-section h2,
+#experience-section h2,
+#skills-section h2,
+#projects-section h2,
+#contact-section h2,
+#inspiration-section h2 {
+    margin: 25px 0;
+    text-align: center;
 }
 
 
@@ -178,7 +193,9 @@ a {
     margin-top: 5px;
 }
 
-.hero-buttons button {
+.hero-buttons button,
+.hero-buttons a {
+    display: inline-block;
     padding: 10px 24px;
     border: 2px solid #a8d0e6;
     border-radius: 25px;
@@ -186,11 +203,13 @@ a {
     color: #243053;
     font-family: "Lato", sans-serif;
     font-weight: 700;
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.hero-buttons button:hover {
+.hero-buttons button:hover,
+.hero-buttons a:hover {
     background-color: transparent;
     color: white;
     transform: translateY(-3px);
@@ -262,28 +281,14 @@ a {
     margin-bottom: 0;
 }
 
+
 /* =========================
    EXPERIENCE
    ========================= */
 
 #experience-section {
     background-color: #33427c;
-    padding: 70px 0;
-    scroll-margin-top: 56px;
 }
-
-#experience-section h2 {
-    margin: 15px 0 15px;
-    text-align: center;
-    font-family: "DM Serif Display", serif;
-}
-
-#experience-section hr {
-    margin: 10px 0;
-    opacity: 0.35;
-}
-
-/* Experience cards */
 
 .experience-item {
     margin: 15px;
@@ -302,7 +307,6 @@ a {
 }
 
 .experience-item h3 {
-    font-family: "DM Serif Display", serif;
     font-size: 1.4rem;
     margin-bottom: 5px;
     color: #a8d0e6;
@@ -325,19 +329,91 @@ a {
 
 
 /* =========================
-   EXPERIENCE MOBILE
+   PROJECTS
    ========================= */
 
-@media (max-width: 600px) {
+#projects-section {
+    background-color: #374785;
+}
 
-    #experience-section {
-        padding: 60px 0;
-    }
+.project-item {
+    padding: 12px;
+}
 
-    .experience-item {
-        margin: 10px 15px;
-        padding: 20px 20px 20px 25px;
-    }
+.project-content {
+    height: 100%;
+    padding: 28px;
+    background-color: #243053;
+    border-radius: 12px;
+    border-top: 4px solid #a8d0e6;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-content:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.project-content h3 {
+    color: #a8d0e6;
+    margin-bottom: 8px;
+}
+
+.project-tech {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 18px;
+}
+
+.project-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.project-highlight {
+    color: #a8d0e6;
+    font-weight: 700;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #a8d0e6;
+}
+
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.project-filters button {
+    padding: 8px 18px;
+    border: 2px solid #a8d0e6;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-filters button:hover,
+.project-filters button.active {
+    background-color: #a8d0e6;
+    color: #243053;
+    transform: translateY(-2px);
 }
 
 
@@ -346,7 +422,7 @@ a {
    ========================= */
 
 #skills-section {
-    background-color: #374785;
+    background-color: #33427c;
 }
 
 #skills-section .skill-item {
@@ -402,7 +478,7 @@ a {
    ========================= */
 
 #contact-section {
-    background-color: #33427c;
+    background-color: #374785;
 }
 
 .contact-item a {
@@ -538,5 +614,14 @@ a {
 
     .hero-buttons button {
         width: 100%;
+    }
+
+    .experience-item {
+        margin: 10px 15px;
+        padding: 20px 20px 20px 25px;
+    }
+
+    .project-content {
+        padding: 22px;
     }
 }
